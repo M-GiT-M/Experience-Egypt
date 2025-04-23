@@ -1,0 +1,1141 @@
+:root {
+    --sand: #e9dfc7;
+    --sand-bold: #c9ae74;
+    --sand-dark: #8a671c;
+    --pyramid: #ad9b80;
+    --pyramid-tan: #d2b48c;
+    --nileR: #194751;
+    --night: #222831;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: var(--pyramid-tan);
+    padding: 8px;
+    z-index: 1001;
+    /* This shows the header above all other elements */
+}
+
+.nav-panel {
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: url("Assessment Resources/Hieroglyphics\ Pattern.jpeg");
+    background-size: cover;
+    /* Background image will scale correctly */
+    border-radius: 5px 19px 19px 8px;
+    padding: 8px;
+    width: auto;
+    transition: all 0.4s ease-in-out
+}
+
+/* Had to implement this to make the nav panel work on the mobile device */
+.nav-checkbox {
+    display: none;
+}
+
+/* Creating the hamburger nav panel */
+.nav-hamburger {
+    font-size: 100%;
+    color: white;
+    cursor: pointer;
+    /* When hovering over the hamburger, it will change to the pointer */
+    padding: 8px;
+    border-radius: 10px;
+    background: var(--pyramid-tan);
+    text-align: center;
+}
+
+.nav-hamburger:hover {
+    background: var(--sand-dark);
+    width: auto;
+}
+
+.nav-buttons {
+    list-style: none;
+    /* Removes the bullet points */
+    padding: 0;
+    margin: 0;
+    width: 0;
+    /* Defualt display will be hidden for the panel */
+    overflow: hidden;
+    display: flex;
+    /* the defualt is to hide the panel */
+    flex-direction: row;
+    align-items: left;
+    /* Positions the links to the left */
+    transition: all 0.4s ease-in-out;
+    /* Panel can slide out and in */
+}
+
+.nav-buttons li {
+    padding: 10px 20px;
+    color: white;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.nav-panel:hover .nav-buttons {
+    width: 90%;
+    /* Positions it horizontally */
+}
+
+.nav-buttons a {
+    color: white;
+    text-decoration: none;
+    /* Removes underline that show on the links */
+    font-size: 100%;
+    transition: color 0.4s ease;
+    display: block;
+}
+
+.nav-buttons a:hover {
+    color: var(--sand-dark);
+}
+
+body {
+    font-family: 'Noto Sans Egyptian Hieroglyphs', sans-serif;
+    color: var(--night);
+    background-color: rgb(243, 240, 236);
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    /* Using auto will make the code more responsive */
+    overflow: hidden;
+}
+
+.bannerVideo {
+    position: relative;
+    width: 100%;
+    /* Will adapt to any device size */
+    height: auto;
+    overflow-x: hidden;
+}
+
+.bannerImage img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    display: block;
+}
+
+.title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 6vw;
+    font-weight: bold;
+    font-family: didot serif;
+    font-style: italic;
+}
+
+.subtitle {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    text-align: center;
+    /* Ensures the subtitle remains in position */
+    width: 90%;
+    transform: translate(-50%, -50%);
+    color: rgb(198, 161, 113);
+    font-size: 1.5vw;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+/* Home Page */
+.introduction {
+    margin: 18px auto;
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+    width: 90%;
+    max-width: auto;
+    /* So the content does not exceed this limit in larger screens */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.introduction h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: var(--pyramid-tan);
+    margin-bottom: 20px;
+}
+
+.introduction h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.introduction p {
+    font-size: 1.3em;
+}
+
+/* What Services are provided */
+.servs {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: auto;
+    gap: 10px;
+    margin: 0 auto;
+    /* Centers the section */
+    flex-wrap: wrap;
+    /* Fixes the layout in different sized screens */
+    align-items: stretch;
+    /* The paragraph will adjust to different screens */
+}
+
+.serv {
+    background-color: #eeebe4;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    width: 25%;
+    /* The containers become evenly sized */
+    min-width: 250px;
+    /* Sets a minimum the containers will not shrink more than */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    /* Creates a margin between the items */
+}
+
+.serv i {
+    font-size: 2.5em;
+    color: var(--pyramid-tan);
+}
+
+.serv:hover,
+.Award:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.Award {
+    padding: 15px;
+    text-align: center;
+    border-radius: 12px;
+    gap: 5%;
+    width: 25%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+}
+
+.Award img {
+    width: 90px;
+    display: block;
+    height: auto;
+    margin: 0 auto 10px;
+}
+
+.ItineraryTitle {
+    position: relative;
+    color: var(--sand-bold);
+    font-size: 2.5em;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.ItinerarySubtitle {
+    position: relative;
+    color: var(--night);
+    font-size: 1.3em;
+    margin-top: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.ItineraryRoll {
+    padding: 1%;
+    gap: 1%;
+    /* Which is the gap between the images */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    /* Scrolling would be enabled horizontally */
+    width: 98%;
+    border-radius: 15px;
+    background-color: var(--pyramid-tan);
+    margin-bottom: 100px;
+}
+
+.Polaroid {
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex: 0 0 auto;
+    /* Prevents stretching */
+    flex-direction: column;
+    align-items: center;
+}
+
+.Polaroid img {
+    width: 24vw;
+    /* To automatically adjust to any device */
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    /* Makes Sure the image fills the area */
+    cursor: pointer;
+    transition: transform 0.4 ease-in-out;
+}
+
+.Polaroid img:hover {
+    transform: scale(1.15);
+    /* Zooms in on each image when hovering over */
+}
+
+.Polaroid .description {
+    padding: 7px 12px;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: whitesmoke;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 125%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.Polaroid :hover .description {
+    opacity: 1;
+}
+
+/* Hitory Page */
+.histH2 {
+    text-transform: uppercase;
+    color: var(--pyramid-tan);
+    text-align: center;
+    font-size: clamp(1.5em, 5vw, 2.5em);
+    /* Responsive font size */
+    margin-bottom: 50px;
+}
+
+.bodyHist p,
+ul {
+    text-align: center;
+    font-size: clamp(1em, 3vw, 1.3em);
+    margin-top: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.tLine {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px auto;
+    /* Vertical Spacing */
+    min-width: 100vw;
+}
+
+.tLine::before {
+    content: "";
+    /* Empty element to display line */
+    position: absolute;
+    left: 50%;
+    /* Centers horizontally */
+    width: 90%;
+    height: 10px;
+    /* line width */
+    border-radius: 10px;
+    background-color: var(--sand);
+    transform: translateX(-50%);
+    /* Centers the line */
+}
+
+.contT {
+    position: relative;
+    padding: 10px;
+    /* Spacing inside the blocks */
+    margin: 20px 15px;
+    /* Horizontal and Vertical Spacing*/
+    background-color: white;
+    max-width: 250px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 2px 4px 10px #00000033;
+    /* The blocks appear above the line */
+}
+
+.contT:nth-child(even) {
+    margin-bottom: 275px;
+    /* 'Boxes' 2,4 and 6 will be above the line */
+}
+
+.contT:nth-child(odd) {
+    margin-bottom: -235px;
+    /* 'Boxes' 1, 3 and 5 will be below the line */
+}
+
+.contT::before {
+    content: "";
+    /* Creates an empty element for the dot */
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    /* Creates a diameter */
+    background-color: var(--pyramid);
+    border-radius: 50%;
+    /* Creates the circle shape */
+    left: 50%;
+    top: 50%;
+    /* centers the dot inside the block */
+    transform: translate(-50%, -50%);
+
+}
+
+.contT h3 {
+    margin-top: 0;
+    color: var(--pyramid-tan);
+    font-size: clamp(1.1em, 4vw, 1.4em);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contT p {
+    text-align: center;
+    font-size: clamp(0.9em, 2.5vw, 1em);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.relCont {
+    padding: 20px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: auto;
+    align-items: center;
+}
+
+.bookRel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pageRel {
+    background: url("Assessment\ Resources/Book Cover.jpeg");
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    margin: 0 auto;
+    border-radius: 2px 20px 20px 2px;
+    /* Mimmicks a book shape */
+    width: 250px;
+    height: 300px;
+}
+
+.pageRel h3 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+    top: 70px;
+    left: 50px;
+    font-size: clamp(1em, 3vw, 1.2em);
+}
+
+.pageRel i {
+    color: white;
+    position: relative;
+    left: 168px;
+    top: 50px;
+}
+
+.relCont p {
+    text-align: center;
+    font-size: clamp(1em, 3vw, 1.3em);
+    margin-top: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.arts {
+    width: 90%;
+    max-width: auto;
+    /* To adjust in larger screens */
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.arts p,
+ul,
+li {
+    margin-top: 0;
+    line-height: 1.6;
+    font-size: clamp(0.9em, 2.5vw, 1em);
+}
+
+.iconContainer {
+    display: flex;
+    align-items: center;
+}
+
+.fa-music,
+.fa-film {
+    font-size: clamp(1.5em, 5vw, 2.5em);
+    color: var(--pyramid-tan);
+    margin: 0 10px 0 0;
+}
+
+.subArts {
+    margin: 0;
+    display: inline-block;
+}
+
+.tapes {
+    /* creating a cassette tape container */
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+
+.cassette {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    transition: transform 0.4s ease;
+}
+
+.cassette:hover {
+    transform: translateY(-10px);
+}
+
+.cassette img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid var(--sand);
+    border-bottom-width: 30px;
+    border-radius: 10px 10px 0 0;
+    /* Creating cassette shape */
+    position: relative;
+}
+
+.cassette::before {
+    /* Mimmicking cassette tape design - researched */
+    position: absolute;
+    content: '';
+    width: 80%;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.659);
+    border-radius: 6px;
+    top: 35%;
+    left: 53%;
+    transform: translateX(-50%);
+    z-index: 1;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+.musContainer {
+    background-color: #eeebe4;
+    border-radius: 20px;
+    padding: 15;
+    min-width: 250px;
+}
+
+.musContainer p,
+li {
+    line-height: 2;
+    font-size: clamp(1em, 3vw, 1.2em);
+}
+
+.cassette p {
+    position: relative;
+    text-align: center;
+    font-size: clamp(1em, 3vw, 1.2em);
+}
+
+.cinema {
+    margin-bottom: 30px;
+    padding: 30px 20px;
+    background-color: var(--sand);
+}
+
+/* Researched how to make a filmRoll effect */
+.filmRoll {
+    position: relative;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* In smaller screens it will adjust the content */
+    justify-content: space-evenly;
+    height: 250px;
+}
+
+.filmRoll::before,
+.filmRoll::after {
+    /* Mimmicking the film roll effect - researched */
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.315);
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 15px, white 25px, white 20px);
+}
+
+.filmRoll::before {
+    top: -15px;
+}
+
+.filmRoll::after {
+    bottom: -15px;
+}
+
+.film {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transition: all 0.4s ease;
+    perspective: 1000px;
+}
+
+.film::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    box-sizing: border-box;
+    border: 8px solid black;
+    border-left-width: 10px;
+    border-right-width: 10px;
+}
+
+.film::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 15px;
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 15px, white 15px, white 20px);
+}
+
+.film:hover {
+    transform: translateX(10px) rotateY(15deg);
+    /* Film roll moving effect */
+}
+
+.film img {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 8px solid black;
+    border-right-width: 10px;
+    border-left-width: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.film p {
+    margin-top: 10px;
+    margin-left: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgb(175, 168, 152);
+    font-size: clamp(0.8em, 2.5vw, 1em);
+}
+
+/* Visit Page */
+.whereToGo {
+    max-width: 98%;
+    padding: 10px;
+    margin: 0 auto;
+    /* Will center the section */
+}
+
+.postTitle {
+    position: relative;
+    color: var(--pyramid-tan);
+    text-transform: uppercase;
+    text-size-adjust: auto;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0;
+    /* To remove spacing with the elements below */
+}
+
+.postSubtitle {
+    position: relative;
+    margin-top: 0px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.list-group-item-action.active {
+    background-color: var(--pyramid-tan) !important;
+    border-color: var(--pyramid-tan) !important;
+}
+
+.postCard {
+    padding: 15px;
+    margin-bottom: 5%;
+    gap: 15px;
+    /* Creates a gap between each post */
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+    scrollbar-width: 18;
+    /* Standard width for safari browser */
+    background-color: var(--pyramid-tan);
+}
+
+.post {
+    flex: 0 0 20%;
+    /* Fixes the size for the postcards */
+    margin: 0;
+    padding-left: 5px;
+    padding: 5px;
+    border-radius: 20px;
+    scroll-snap-align: start;
+    background: white;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    /* Mimmicks modern websites in creating a professional look */
+    min-width: 335px;
+    /* Width on mobile will make the images/posts more readable */
+}
+
+.post img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.details {
+    padding: 8px;
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9em;
+}
+
+.path {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+    /* Ensures there is spacing between the lines */
+    margin-top: 10px;
+    margin-left: 10px;
+    /* Differentiates between the details and name */
+}
+
+.fa-location-dot,
+.fa-table-list {
+    color: brown;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+/* Contacts Page */
+.body-Contacts {
+    background: url("Assessment\ Resources/cBlock-Body.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.cBlock {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 30px;
+    width: 75%;
+    max-width: 90%;
+    min-height: 580px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 16px 16px 40px rgba(0, 0, 0, 0.511);
+}
+
+.form-cBlock h1 {
+    color: var(--pyramid-tan);
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-left: 5.7vw;
+}
+
+.contentForm {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 4em;
+}
+
+.inpC {
+    display: flex;
+    flex-direction: column;
+    width: 55%
+}
+
+.inpContent {
+    position: relative;
+    width: 100%;
+}
+
+.inpContent input {
+    background-color: rgb(236, 236, 236);
+    border: none;
+    margin: 10px 0;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    /* Space for the icons used from fa */
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    /* Padding doesnt increase the width */
+}
+
+.inpContent i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: grey;
+    opacity: 0.6
+}
+
+.cBlock textarea {
+    background-color: rgb(236, 236, 236);
+    border: 0;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    font-size: 14px;
+    outline: 0;
+    resize: none;
+    /* Does not allow the user to edit the size of the text box */
+}
+
+.cBlock button {
+    display: block;
+    padding: 10px 15px;
+    border: 0;
+    margin-top: 10px;
+    border-radius: 8px;
+    width: auto;
+    color: white;
+    background-color: var(--pyramid-tan);
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.cBlock-map {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 100px;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: var(--pyramid-tan);
+    margin-top: 1200px;
+    padding: 10px;
+    text-align: left;
+    position: fixed;
+    bottom: 0;
+    /* Ensures the footer stays at the bottom of any page */
+    width: 100%;
+}
+
+/*Makes some space between the navigation and copyright*/
+.nav-footer {
+    margin-bottom: 4px;
+    font-size: 80%;
+}
+
+.nav-footer a {
+    color: var(--sand);
+    text-decoration: none;
+    padding: 2px;
+    /* Reduces accidental touching of other links */
+    margin: 0 10px;
+    /* This gives each link some spacing between them */
+    transition: color 0.4s ease;
+    /* When Hovering over the links, the color change will be smoother */
+}
+
+.nav-footer a:hover {
+    color: var(--sand-dark);
+}
+
+.footer p {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 50%;
+    opacity: 0.7;
+    /*Text is slightly transparent to mimmick professional websites*/
+}
+
+/* Ensures the code is mobile compatible - 768 Common Device Size */
+@media screen and (max-width: 768px) {
+    .nav-panel {
+        top: 10px;
+        left: 10px;
+        position: fixed;
+        z-index: 1002;
+    }
+
+    .nav-hamburger {
+        padding: 10px;
+        font-size: 120%;
+    }
+
+    .nav-buttons {
+        position: absolute;
+        flex-direction: column;
+        background: url("Assessment Resources/Hieroglyphics Pattern.jpeg");
+        left: 0;
+        top: 100%;
+        width: 0;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .nav-buttons li {
+        width: 100%;
+        padding: 8px 12px;
+        box-sizing: border-box;
+    }
+
+    .nav-panel:hover .nav-buttons {
+        width: auto;
+        min-width: 90px;
+        flex-direction: column;
+        /* Adjusts panel to open vertically when in mobile view */
+        border-radius: 0 0 8px 8px;
+    }
+
+    .nav-buttons a {
+        display: block;
+        width: 100%;
+        overflow: auto;
+    }
+
+    .banner img {
+        height: 250px;
+    }
+
+    .title {
+        position: absolute;
+        top: 20%;
+        font-size: 8vw;
+    }
+
+    .subtitle {
+        font-size: 3.5vw;
+        /* The code is more readable on mobile view */
+    }
+
+    .body {
+        font-size: 14px;
+
+    }
+
+    .introduction h1 {
+        font-size: 2em;
+        /* So that it doesnt take up the majority of the screen space */
+    }
+
+    .introduction h3 {
+        font-size: 1.3em;
+    }
+
+    .introduction p {
+        font-size: 1.1em;
+    }
+
+    .serv:hover,
+    .Award:hover {
+        transform: none;
+    }
+
+    .serv {
+        width: 100%;
+        /* Improves readbility on mobile devices */
+        min-width: none;
+    }
+
+    .tLine {
+        flex-direction: column;
+        /* Stacks vertically to fit screen size */
+        padding: 10px;
+    }
+
+    .tLine::before {
+        height: 90%;
+        /* Positions the line vertically to fit the screen */
+        width: 10px;
+        background-color: var(--pyramid-tan);
+    }
+
+    .contT {
+        max-width: 350px;
+        /* Makes the width fit the page size */
+        height: 350px;
+        margin: 10px auto;
+        /* Positions the blocks in the center */
+    }
+
+    .contT:nth-child(even) {
+        margin-bottom: 20px;
+    }
+
+    .contT:nth-child(odd) {
+        margin-bottom: 20px;
+    }
+
+    .bookRel {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .cassette {
+        margin: 0 auto;
+    }
+
+    .cassette::before {
+        top: 30%
+    }
+
+    .filmRoll {
+        flex-direction: column;
+        align-items: center;
+        height: 950px;
+    }
+
+    .film {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+
+    .ItineraryTitle {
+        text-align: center;
+    }
+
+    .ItinerarySubtitle {
+        text-align: center;
+    }
+
+    .Polaroid img {
+        width: 90vw;
+        /* Improves readability */
+    }
+
+    .Polaroid img:hover {
+        transform: none;
+    }
+
+    .postSubtitle {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .post {
+        flex: 0 0 20%;
+    }
+
+    .body-Contacts {
+        padding-top: 50px;
+        /* Adds spacing to prevent overlapping of content */
+    }
+
+    .form-cBlock h1 {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .contentForm {
+        flex-direction: column;
+        /* The elements will display vertically to enhance readability */
+        gap: 2em;
+        width: 100%;
+    }
+
+    .inpC {
+        width: 100%;
+        /* Enhanced Readability */
+    }
+
+    .cBlock textarea {
+        padding-bottom: 0;
+    }
+
+    #cButton {
+        margin-left: 0;
+        margin-top: 10px;
+        position: relative;
+        display: block;
+        /* Removes Offset */
+    }
+
+    .cBlock-map {
+        height: 200px;
+    }
+
+    .mapContent {
+        margin-top: 0;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 0;
+        /* Improves Readability */
+    }
+
+    .nav-footer {
+        flex-wrap: wrap;
+    }
+}

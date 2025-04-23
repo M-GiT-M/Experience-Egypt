@@ -1,0 +1,29 @@
+c525110 Mahmoud Mustafa 2025-03-15 Project Complete
+ee22db6 Mahmoud Mustafa 2025-03-14 Finalised History Page and Added a Static Map in Home Page as listed in Criteria
+8f7689e Mahmoud Mustafa 2025-03-13 Updated @media query and completed 40% of History Page
+c1d4868 Mahmoud Mustafa 2025-03-12 Merging README file
+5ab4df2 Mahmoud Mustafa 2025-03-12 Update README.md
+b841863 Mahmoud Mustafa 2025-03-12 Fixed major errors in mobile compatibility and Completed 80% of Home Page
+9832d0f Mahmoud Mustafa 2025-03-11 Update README.md
+3414d94 Mahmoud Mustafa 2025-03-11 Updated Home Page and Created History Page with general Ideas
+909b52c Mahmoud Mustafa 2025-03-10 Finalised Contacts Page and included static map
+bc1b14c Mahmoud Mustafa 2025-03-10 Test
+2bc5202 Mahmoud Mustafa 2025-03-10 Created the Contacts Page - Structured General Layout
+bc71542 Mahmoud Mustafa 2025-03-10 Update README.md
+6800069 Mahmoud Mustafa 2025-03-10 Finalised Visit Page and Fixed Some General Styling Issues
+1d910dd Mahmoud Mustafa 2025-03-09 Fixed PostCard Sizes and Padding
+626dc66 Mahmoud Mustafa 2025-03-09 Visit Page Set Up
+d965324 Mahmoud Mustafa 2025-03-08 Different Device Compatability Adjusted + Itinerary Roll
+731889b Mahmoud Mustafa 2025-03-07 Finalised Nav Panel & Made an Itinerary Gallery
+126abd1 Mahmoud Mustafa 2025-03-04 Applying CSS - Issue Resolved
+a7923ce Mahmoud Mustafa 2025-03-04 Restoring CSS file
+7ff74c8 Mahmoud Mustafa 2025-03-03 Creating a Nav Bar
+de38d58 Mahmoud Mustafa 2025-03-03 Testing Video Overlay
+324f530 Mahmoud Mustafa 2025-03-03 Attemp 1 - Banner Video
+f770566 Mahmoud Mustafa 2025-03-03 Update README.md
+40d601b Mahmoud Mustafa 2025-03-03 Updated CSS - Setting up intial styles
+8a54914 Mahmoud Mustafa 2025-03-03 Updated CSS - heroBanner and root
+658e811 Mahmoud Mustafa 2025-03-02 Update README.md
+0dfcf67 Mahmoud Mustafa 2025-03-02 Initial Commit
+bb99b14 Mahmoud Mustafa 2025-03-02 Update README.md
+621371b Mahmoud Mustafa 2025-03-02 Initial commit
